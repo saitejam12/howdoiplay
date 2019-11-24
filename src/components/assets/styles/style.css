@@ -74,7 +74,7 @@ html {
 
 html {
   height: 100%;
-  font-family: "Cabin", sans-serif;
+  font-family: 'Cabin', sans-serif;
   font-display: auto;
   font-size: 24px;
   color: #333;
@@ -86,12 +86,11 @@ body {
 }
 
 @font-face {
-  font-family: "dice";
-  src: url("./../fonts/fontello.eot");
-  src: url("./../fonts/fontello.eot?#iefix") format("embedded-opentype"),
-    url("./../fonts/fontello.woff2") format("woff2"),
-    url("./../fonts/fontello.woff") format("woff"),
-    url("./../fonts/fontello.ttf") format("truetype");
+  font-family: 'dice';
+  src: url('./../fonts/fontello.eot');
+  src: url('./../fonts/fontello.eot?#iefix') format('embedded-opentype'),
+    url('./../fonts/fontello.woff2') format('woff2'), url('./../fonts/fontello.woff') format('woff'),
+    url('./../fonts/fontello.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -111,7 +110,7 @@ a:hover {
 .typeahead,
 .tt-query,
 .tt-hint {
-  font-family: "Cabin", sans-serif;
+  font-family: 'Cabin', sans-serif;
   width: 300px;
   height: 40px;
   padding: 0px 12px;
@@ -343,7 +342,7 @@ a:hover {
 #links {
   bottom: 0;
   width: 100%;
-  font-family: "Hind", sans-serif;
+  font-family: 'Hind', sans-serif;
   font-display: auto;
   padding: 35px 30px 50px;
   font-size: 14px;
@@ -382,7 +381,7 @@ a:hover {
   margin-top: -18px;
   line-height: 24px;
   font-size: 24px;
-  font-family: "dice";
+  font-family: 'dice';
   padding: 6px 10px;
 }
 
@@ -413,7 +412,7 @@ a:hover {
 .patch .patch-text {
   color: white;
   position: absolute;
-  font-family: "Fjalla One";
+  font-family: 'Fjalla One';
   font-size: 0.6em;
   right: -0.525em;
   top: 0.19em;
@@ -440,7 +439,7 @@ a:hover {
   /*Beta Text*/
   color: black;
   position: absolute;
-  font-family: "Kalam";
+  font-family: 'Kalam';
   font-weight: bold;
   font-size: 0.725em;
   right: -0.09em;
@@ -586,7 +585,7 @@ a:hover {
   margin: 0 auto;
   padding: 20px 16px 14px 16px;
   border-top: solid 1px #ebebeb;
-  image-rendering: pixelated;
+  image-rendering: crisp-edges;
   image-rendering: -moz-crisp-edges;
   -webkit-transition: border-top-color 0.3s;
   -moz-transition: border-top-color 0.3s;
@@ -645,7 +644,7 @@ button.paypal {
   color: #ffffff;
   font-size: 16px;
   background-color: #c3c3c3;
-  font-family: "dice";
+  font-family: 'dice';
   -webkit-transition: background-color 80ms ease-in;
   -moz-transition: background-color 80ms ease-in;
   transition: background-color 80ms ease-in;
@@ -667,7 +666,7 @@ button.paypal:hover {
 }
 
 #social a {
-  font-family: "dice";
+  font-family: 'dice';
   text-decoration: none;
   color: #c3c3c3;
   font-size: 25px;

@@ -1,5 +1,5 @@
 import React from 'react';
-
+const osFrog = <img src='src/assets/media/OSfrog.png' alt='OSfrog' />;
 const quotes = [
   [`I JUST RANDOMED`, `. NOW WHAT?`],
   [`MY CAPTAIN PICKED ME`, `AND NOW I'M PANICKING.`],
@@ -34,42 +34,39 @@ const quotes = [
   [`WHO NEEDS VERSATILITY? I'M THE`, `MASTER.`],
   [`I NEED THE LEVEL 25 DOTA PLUS VOICE LINE ON`, `.`],
   [`ALL THE BOOSTERS ARE SPAMMING`, `? THEY MUST BE ON TO SOMETHING.`],
-  [
-    `<img src={'./assets/media/OSfrog.png'} alt='OSfrog'> LE BALANCED`,
-    `HERO '<img src={'./assets/media/OSfrog.png'} alt='OSfrog'>`,
-  ],
+  [`${osFrog} LE BALANCED`, `HERO ${osFrog}`],
   [`But is `, `good as a Pos 6 🤔?`],
-  [
-    `One`,
-    `Ye.. im DED`,
-  ] /*,
-          ["GOOD TIPS MATE REAL USEFUL, SEE U AT", "J"],
-          ["U", "-PLAYING PUNKS ARE NEVER SATISFIED ARE YOU?"],
-          ["HOW 2 PLEY", "? #HARDWORK #DEDICATION. DEFENSIVE LANING."],
-          ["", "CAN YOU TP TOP?"],
-          ["", "'S A GOOD HERO, A BIT OVERRATED IN MY OPINION."],
-          ["I WONDER IF I CAN JUNGLE", "?"],
-          ["Ｈｅｌｌｏ Ｉ＇ｍ Ｓｎｉｔｈ， ｐｌａｙｉｎｇ ｍｙ ２０２１４３ｔｈ ｇａｍｅ ｏｎ", "."],
-          ["👌👀👌👀👌👀 good tips go౦ԁ tIps👌 thats ✔ some good👌👌", "right👌👌there👌👌👌"],
-          ["13 MANA", ""],
-          ["IF I PLAY", "NOW, DO I GET ALL THE PREVIOUS REWARDS?"],
-          ["hey its me ur", ""],
-          ["I'M A SIMPLE MAN. I PLAY", ", I LOSE."],
-          ["420", "WIZARD"],
-          ["<img src='./assets/media/CoolCat.png' alt='CoolCat'>", "𝓑𝓪𝔂 <img src='./assets/media/CoolCat.png' alt='CoolCat'>"],
-          ["", "is an ass, and we won't be picking it again."],
-          ["Nippy. Kind.", "."],
-          ["But is ", "good as pos 6 🤔?"],
-          ["one", "Ye.. im DED"]*/,
+  [`One`, `Ye.. im DED`],
+  /*,
+  // ["GOOD TIPS MATE REAL USEFUL, SEE U AT", "J"],
+  // ["U", "-PLAYING PUNKS ARE NEVER SATISFIED ARE YOU?"],
+  // ["HOW 2 PLEY", "? #HARDWORK #DEDICATION. DEFENSIVE LANING."],
+  // ["", "CAN YOU TP TOP?"],
+  // ["", "'S A GOOD HERO, A BIT OVERRATED IN MY OPINION."],
+  // ["I WONDER IF I CAN JUNGLE", "?"],
+  // ["Ｈｅｌｌｏ Ｉ＇ｍ Ｓｎｉｔｈ， ｐｌａｙｉｎｇ ｍｙ ２０２１４３ｔｈ ｇａｍｅ ｏｎ", "."],
+  // ["👌👀👌👀👌👀 good tips go౦ԁ tIps👌 thats ✔ some good👌👌", "right👌👌there👌👌👌"],
+  // ["13 MANA", ""],
+  // ["IF I PLAY", "NOW, DO I GET ALL THE PREVIOUS REWARDS?"],
+  // ["hey its me ur", ""],
+  // ["I'M A SIMPLE MAN. I PLAY", ", I LOSE."],
+  // ["420", "WIZARD"],
+  // ["<img src='./assets/media/CoolCat.png' alt='CoolCat'>", "𝓑𝓪𝔂 <img src='./assets/media/CoolCat.png' alt='CoolCat'>"],
+  // ["", "is an ass, and we won't be picking it again."],
+  // ["Nippy. Kind.", "."],
+  // ["But is ", "good as pos 6 🤔?"],
+  // ["one", "Ye.. im DED"]*/
 ];
 
 const random = quotes[Math.floor(Math.random() * quotes.length)];
 console.log(random);
-const InputLine = () => {
-  const [heroName, setHeroName] = React.useState();
+const InputLine = ({ hero, setHero }) => {
+  const [heroName, setHeroName] = React.useState(hero);
   const handleInput = e => {
     setHeroName(e.target.value);
+    setHero;
   };
+  const randomHero = () => {};
   return (
     <div className='inputline'>
       <form id='heroinput-form' action='/' method='get'>
@@ -79,13 +76,13 @@ const InputLine = () => {
             className='typeahead'
             type='text'
             placeholder='Hero Name'
-            autoComplete='off'
+            autoComplete='on'
             aria-label='Hero Name'
             value={heroName}
             onChange={handleInput}
           />
           <span id='randomhero'>
-            <a href='#' title='Random Hero (No Bonus Mango)'>
+            <a href='#' title='Random Hero (No Bonus Mango)' onClick={randomHero}>
               
             </a>
           </span>
